@@ -2,17 +2,13 @@
     "name" : "Digest::SHA1::Native",
     "source-url" : "git://github.com/bduggan/p6-digest-sha1-native.git",
     "perl" : "6.*",
-    "resources" : [
-        "libraries/sha1"
-    ],
-    "build-depends" : [ "Shell::Command" ],
+    "resources" : [ ],
+    "build-depends" : [ ],
     "provides" : {
         "Digest::SHA1::Native" : "lib/Digest/SHA1/Native.pm6"
     },
-    "depends" : [
-        "LibraryMake"
-    ],
-    "description" : "Raku bindings to C implementation of SHA1",
+    "depends" : [ ],
+    "description" : "Raku bindings to OpenSSL implementation of SHA1",
     "test-depends" : [ ],
     "version" : "0.05",
     "license" : "Artistic-2.0",
