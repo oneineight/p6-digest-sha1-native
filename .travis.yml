@@ -1,5 +1,5 @@
-language: raku
-raku:
+language: perl6
+perl6:
   - moar-2022.12
 install:
   - rakudobrew build zef
