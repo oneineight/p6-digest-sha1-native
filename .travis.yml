@@ -1,8 +1,7 @@
 language: raku
 raku:
-  - latest
+  - moar-2022.12
 install:
   - rakudobrew build zef
   - zef install --depsonly .
   - raku Configure.pl6
-sudo: false
