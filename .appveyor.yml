@@ -20,6 +20,7 @@ install:
   - SET PATH=C:\Rakudo\bin;C:\Rakudo\share\perl6\site\bin;%PATH%
   - ps: refreshenv
   - raku -v
+  - zef install App::Prove6
 
   - cd %APPVEYOR_BUILD_FOLDER%
   - zef --verbose install . --depsonly
