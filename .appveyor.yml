@@ -3,12 +3,18 @@ os: Visual Studio 2015
 platform: x64
 
 # Update *_clear_cache.txt to force re-install
-#cache:
-#    - C:\Strawberry -> .appveyor_clear_cache.txt
-#    - C:\Rakudo -> .appveyor_clear_cache.txt
+cache:
+    - C:\Git -> .appveyor_clear_cache.txt
+    - C:\Strawberry -> .appveyor_clear_cache.txt
+    - C:\Rakudo -> .appveyor_clear_cache.txt
 
 install:
   - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
+
+  - IF NOT EXIST "C:\Git" choco install git
+  - SET PATH=C:\Git\bin;%PATH%
+  - ps: refreshenv
+  - git --version
 
   - IF NOT EXIST "C:\Strawberry" choco install strawberryperl
   - SET PATH=C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;%PATH%
