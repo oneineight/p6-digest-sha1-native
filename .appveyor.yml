@@ -10,10 +10,10 @@ platform: x64
 install:
   - '"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64'
 
-#  - IF NOT EXIST "C:\Strawberry" choco install strawberryperl
-#  - SET PATH=C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;%PATH%
-#  - ps: refreshenv
-#  - perl -v
+  - IF NOT EXIST "C:\Strawberry" choco install strawberryperl
+  - SET PATH=C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;%PATH%
+  - ps: refreshenv
+  - perl -v
 
   - IF NOT EXIST "C:\Rakudo" appveyor DownloadFile "https://rakudo.org/latest/star/win" -FileName "%APPVEYOR_BUILD_FOLDER%\rakudo.msi"
   - IF NOT EXIST "C:\Rakudo" msiexec /i rakudo.msi /quiet /qn /norestart /log install.log
